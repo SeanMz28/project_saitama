@@ -52,7 +52,17 @@ const LeaderboardTable = ({ data }: LeaderboardTableProps) => {
 
                     {/* Username + fire GIF if streak > 30 */}
                     <div className="flex items-center gap-1">
-                      <span className="font-medium text-white">
+                      <span
+                        className="
+      inline-block                /* behave like the streak pill */
+      min-w-[6rem]                /* enforce a minimum width */
+      px-2 py-0.5                 /* horizontal/vertical padding */
+      whitespace-nowrap           /* no wrapping */
+      flex-shrink-0               /* never shrink below min-w */
+      rounded-full                /* circular ends */
+      text-white font-medium      /* text styling */
+    "
+                      >
                         {entry.username}
                       </span>
                       {entry.streak > 15 && (
