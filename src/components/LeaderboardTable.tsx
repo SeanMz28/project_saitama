@@ -55,7 +55,7 @@ const LeaderboardTable = ({ data }: LeaderboardTableProps) => {
                       <span
                         className="
       inline-block                /* behave like the streak pill */
-      min-w-[6rem]                /* enforce a minimum width */
+      min-w-[4.5rem]                /* enforce a minimum width */
       px-2 py-0.5                 /* horizontal/vertical padding */
       whitespace-nowrap           /* no wrapping */
       flex-shrink-0               /* never shrink below min-w */
