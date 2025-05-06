@@ -2,7 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, setPersistence, browserLocalPersistence } from "firebase/auth";
 import { getStorage } from "firebase/storage";
-import { getAnalytics } from "firebase/analytics";
+//import { getAnalytics } from "firebase/analytics";
 import {
     getFirestore,
     doc,
@@ -15,6 +15,7 @@ import {
     serverTimestamp,
     where,
     query,
+    orderBy,
     getDocs,
     deleteDoc,
     runTransaction,       // ← for atomic reads+writes
@@ -46,7 +47,7 @@ setPersistence(auth, browserLocalPersistence)
     // console.log("Persistence set successfully");
   })
   .catch((error) => {
-    // console.error("Error setting persistence:", error);
+    console.error("Error setting persistence:", error);
   });
 
 const db = getFirestore(app);
@@ -60,6 +61,7 @@ export {
     setDoc,
     updateDoc,
     arrayUnion,
+    orderBy,
     imgDB,
     collection,
     addDoc,

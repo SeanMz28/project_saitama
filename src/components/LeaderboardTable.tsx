@@ -55,7 +55,7 @@ const LeaderboardTable = ({ data }: LeaderboardTableProps) => {
                       <span className="font-medium text-white">
                         {entry.username}
                       </span>
-                      {entry.streak > 19 && (
+                      {entry.streak > 15 && (
                         <img
                           src={fireGif.src}
                           alt="🔥"
