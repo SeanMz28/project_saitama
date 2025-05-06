@@ -7,13 +7,13 @@ import { Card, CardContent } from '@/components/ui/card';
 
 // 1) List your seven images in the order you like (0 = Sunday, … 6 = Saturday)
 const backgroundImages = [
-    '/images/allmight.png',  // Sunday
+    '/images/gojo.png',  // Sunday
     '/images/deku.jpeg',    // Monday
     '/images/broly1.png',     // Tuesday
-    '/images/gojo.png',      // Wednesday
-    '/images/kenny.png',     // Thursday
-    '/images/lee.jpg',       // Friday
-    '/images/yuji.jpeg',     // Saturday
+    '/images/yuji.jpeg',      // Wednesday
+    '/images/allmight.png',     // Thursday
+    '/images/kenny.png',       // Friday
+    '/images/lee.jpg',     // Saturday
   ];
 
 const LeaderboardPage = () => {
