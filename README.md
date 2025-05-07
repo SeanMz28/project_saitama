@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Saitama
 
-## Getting Started
+> Track your daily push-up counts, maintain streaks, and compete on a global leaderboard.
 
-First, run the development server:
+<!-- ![Project Saitama Demo](https://project-saitama-five.vercel.app/og-image.png) -->
+
+## 🚀 Live Demo
+
+https://project-saitama-five.vercel.app/
+
+## 📦 Features
+
+- **Daily Push-Up Tracking** – Log how many push-ups you complete each day.
+- **Streak Counter** – Keep motivation up by maintaining an unbroken streak.
+- **Global Leaderboard** – See how you stack up against other users in total push-ups.
+- **User Authentication** – Secure sign-in/out powered by Firebase Auth.
+- **Data Persistence** – All stats stored in Firebase Firestore.
+- **Responsive UI** – Built with Tailwind CSS for mobile & desktop.
+- **Blazing Fast** – Powered by Bun & Next.js with TypeScript.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org/)  
+- **Language**: TypeScript  
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)  
+- **Runtime**: [Bun](https://bun.sh/)  
+- **Backend & Auth**: [Firebase](https://firebase.google.com/) (Auth & Firestore)  
+- **Hosting**: [Vercel](https://vercel.com/)  
+
+## 💾 Getting Started
+
+### Prerequisites
+
+- [Bun v1+](https://bun.sh/) installed  
+
+### Clone & Install
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# 1. Clone this repo
+git clone https://github.com/SeanMz28/project_saitama.git
+
+# 2. Move into the project directory
+cd project_saitama
+
+# 3. Install dependencies with Bun
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Run Locally
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start the development server
+bun run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+### Build & Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Build for production
+bun run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Start production server
+bun run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚢 Deployment
 
-## Deploy on Vercel
+This app is deployed on Vercel. If you connect your GitHub repo to Vercel, it will:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Automatically install dependencies (`bun install`).
+2. Run `bun run build`.
+3. Deploy to your custom domain or `vercel.app` URL.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+1. Fork the repo  
+2. Create a feature branch (`git checkout -b feature/YourFeature`)  
+3. Commit your changes (`git commit -m "feat: add YourFeature"`)  
+4. Push to your branch (`git push origin feature/YourFeature`)  
+5. Open a Pull Request  
+
+Please follow the existing code style and open issues for any major changes.
+
+---
+Made with ❤️ by SeanMz28
