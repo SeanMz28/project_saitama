@@ -1,26 +1,31 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Header from '@/components/Header';
-//import LeaderboardTable from '@/components/LeaderboardTable';
-//import { leaderboardData } from '@/data/leaderboardData';
 import Leaderboard from '@/components/Leaderboard';
 import { Card, CardContent } from '@/components/ui/card';
 
-// 1) List your seven images in the order you like (0 = Sunday, … 6 = Saturday)
 const backgroundImages = [
-    '/images/gojo.png',  // Sunday
-    '/images/deku.jpeg',    // Monday
-    '/images/broly1.png',     // Tuesday
-    '/images/yuji.jpeg',      // Wednesday
-    '/images/allmight.png',     // Thursday
-    '/images/kenny.png',       // Friday
-    '/images/lee.jpg',     // Saturday
-  ];
+  '/images/gojo.png',    // Sunday
+  '/images/deku.jpeg',   // Monday
+  '/images/broly1.png',  // Tuesday
+  '/images/yuji.jpeg',   // Wednesday
+  '/images/allmight.png',// Thursday
+  '/images/kenny.png',   // Friday
+  '/images/lee.jpg',     // Saturday
+];
 
-const LeaderboardPage = () => {
-    // 2) Grab today’s day‐of‐week index (0–6)
-  const todayIndex = new Date().getDay();
-  // 3) Pick the corresponding image
-  const bgImage = backgroundImages[todayIndex];
+export default function LeaderboardPage() {
+  const [bgImage, setBgImage] = useState<string>('');
+
+  useEffect(() => {
+    const index = new Date().getDay();
+    setBgImage(backgroundImages[index]);
+  }, []);
+
+  // Fallback until useEffect runs
+  if (!bgImage) return null;
+
   return (
     <div
     className="min-h-screen bg-cover bg-center flex flex-col"
@@ -43,5 +48,3 @@ const LeaderboardPage = () => {
     </div>
   );
 };
-
-export default LeaderboardPage;
